@@ -1,6 +1,8 @@
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+};
+
+let randomCoolor = getRandomHexColor();
 
 // вибірка елементів
 const btn = document.querySelector('button');
@@ -12,8 +14,6 @@ btn.addEventListener('click', changeColor);
 
   // обробка необхідних елементів
 function changeColor(event) {
-  // зміна кольору body
-  body.style.backgroundColor = getRandomHexColor();
-  // виведення значення кольору
-  span.textContent = body.style.backgroundColor;
+  body.style.backgroundColor = randomCoolor;
+  span.textContent = randomCoolor;
 };
