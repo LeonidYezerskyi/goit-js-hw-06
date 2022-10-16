@@ -14,12 +14,19 @@ function onFormSubmit(event) {
     const {
     elements: { email, password }
     } = event.currentTarget;
+     
+    const obj = {
+        email: email.value,
+        password: password.value,
+    };
+
 // попередження при незаповненому полі
     if (email.value === "" || password.value === "") {
     return alert("Будь-ласка, заповніть усі поля!");
     }
-// Вивід у консоль і очиста значення полів
-    console.log(`Login: ${email.value}, Password: ${password.value}`);
+
+// Вивід у консоль і очистка значення полів
+    console.log(obj);
     event.currentTarget.reset();
 
 };
